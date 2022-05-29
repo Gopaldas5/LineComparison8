@@ -37,5 +37,15 @@ public class LineComparison {
         System.out.println("Distance between two point in line2 is:-  "+"("+x3+","+y3+"),"+"("+x4+","+y4+"):- "+length2);
         Double line2 = Double.valueOf(length2);
 
+        if (line1.compareTo(line2) == 1){
+            System.out.println("Length of line1 is greater than line2 ");
+        }
+        else if (line1.compareTo(line2) == -1){
+            System.out.println("Length of line2 is greater than line1");
+        }
+        else{
+            System.out.println("Lengths of line1 is equal to line2");
+        }
+
     }
 }
