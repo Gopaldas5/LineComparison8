@@ -3,51 +3,51 @@ package com.bridgeLabz;
 import java.util.Scanner;
 
 public class LineComparison {
+     Scanner scanner = new Scanner(System.in);
+ public void lineCom(){
+         public void lineCom(){
+        int x1 = random.nextInt(10);
+        int y1 = random.nextInt(10);
+        int x2 = random.nextInt(10);
+        int y2 = random.nextInt(10);
 
-    public static void main(String[] args) {
-        System.out.println("Welcome Line comparison computation program on master branch ");
+        System.out.println("Point x1 and y1 is "+x1+", "+y1);
+        System.out.println("Point x2 and y2 is "+x2+", "+y2);
 
-        Scanner scanner = new Scanner(System.in);
-        int x1, x2, x3, x4;
-        int y1, y2, y3, y4;
-        double length1;
-        double length2;
-        public void linecomparison() {
-            System.out.println("Enter x1 point:- ");
-            x1 = scanner.nextInt();
-            System.out.println("Enter y1 point:- ");
-            y1 = scanner.nextInt();
-            System.out.println("Enter x2point:- ");
-            x2 = scanner.nextInt();
-            System.out.println("Enter y2 point");
-            y2 = scanner.nextInt();
+        double length1 = Math.sqrt(Math.pow(x2-x1,2)+Math.pow(y2-y1,2));
+        System.out.println("length of the line1 is "+length1);
+        Double line1 = Double.valueOf(length1);
 
-            length1 = Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
-            System.out.println("Distance between two point in line1 is:-  " + "(" + x1 + "," + y1 + ")," + "(" + x2 + "," + y2 + "):- " + length1);
-            Double line1 = Double.valueOf(length1);
+        int x3 = random.nextInt(10);
+        int y3 = random.nextInt(10);
+        int x4 = random.nextInt(10);
+        int y4 = random.nextInt(10);
 
-            System.out.println("Enter x3 point:- ");
-            x3 = scanner.nextInt();
-            System.out.println("Enter y3 point:- ");
-            y3 = scanner.nextInt();
-            System.out.println("Enter x4 point:- ");
-            x4 = scanner.nextInt();
-            System.out.println("Enter y4 point");
-            y4 = scanner.nextInt();
+        System.out.println("Point x3 and y3 is "+x3+", "+y3);
+        System.out.println("Point x4 and y4 is "+x4+", "+y4);
 
-            length2 = Math.sqrt(Math.pow(x4 - x3, 2) + Math.pow(y4 - y3, 2));
-            System.out.println("Distance between two point in line2 is:-  " + "(" + x3 + "," + y3 + ")," + "(" + x4 + "," + y4 + "):- " + length2);
-            Double line2 = Double.valueOf(length2);
+        double length2 = Math.sqrt(Math.pow(x4-x3,2)+Math.pow(y4-y3,2));
+        System.out.println("length of the line2 is "+length2);
+        Double line2 = Double.valueOf(length2);
 
-            if (line1.compareTo(line2) == 1) {
-                System.out.println("Length of line1 is greater than line2 ");
-            } else if (line1.compareTo(line2) == -1) {
-                System.out.println("Length of line2 is greater than line1");
-            } else {
-                System.out.println("Lengths of line1 is equal to line2");
-            }
 
+        if(line1.compareTo(line2) == 1){
+            System.out.println("Line 1 is greater than Line2");
+        } else if (line1.compareTo(line2) == -1) {
+            System.out.println("Line2 is greater than Line1");
+        }
+        else {
+            System.out.println("Both the lines are equal");
         }
     }
 
 }
+public class LineComparisonDayMain{
+    public static void main(String[] args) {
+        System.out.println("Line Comparison Computation Program on Master Branch");
+
+        LineComarison linecomparison = new LineComarison();
+        linecomparison.lineCom();
+
+    }
+}   
